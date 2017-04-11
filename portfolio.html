@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if !IE]><html><![endif]-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Kirk Min's portfolio</title>
+		
+		<!-- Viewport meta tag to prevent iPhone from scaling our page -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<link rel="stylesheet" href="./css/style.css"/>
+		
+		<!-- Normalize hide address bar for iOS and Android -->
+		<script src="./js/hideaddressbar.js"></script>
+		
+		<!-- Add media query support for IE8 and under. Must place media queries in external stylesheet -->
+		<script src="./js/respond.min.js"></script>
+		
+		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
+		<script src="./js/picturefill.js"></script>
+		<script src="./js/matchmedia.js"></script>
+		
+		<!--[if lt IE 9]>
+			<script src="./js/html5.js"></script>
+		<![endif]-->
+			
+			<!--[if lt IE 9]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+			<![endif]-->
+
+			<!--[if IE 8]>
+			<script src="./js/checkbox.js"></script>
+			<![endif]-->
+			
+			<!--[if IE 6]>
+				<script src="./js/selectivizr-min.js"></script>
+			<![endif]-->
+			
+	</head>
+
+	<body lang="en">
+		<div id="container-nav">
+			<section id="nav" class="group wrapper">
+				<h3>Kirk Min</h3>
+		        <!-- Checkbox Hack markup -->
+		        <input type="checkbox" id="toggle" />
+		        <label for="toggle" onclick>Menu</label>
+		        <!-- /Checkbox Hack markup -->
+		        <nav>
+		            <ul>
+		                <li><a href="#portfolio">Portfolio</a></li>
+		                <li><a href="#resume">Resume</a></li>
+		                <li><a href="#skills">Skills</a></li> <!-- No destination yet -->
+		                <li><a href="#contact">Contact</a></li>
+		            </ul>
+		        </nav>
+				
+			
+			</section>
+		</div>
+		<div id="container-header">
+			<header id="masthead" class="wrapper">
+				<figure id="kirk"> 
+				    <div data-picture data-alt="Kirk Min">
+				        <div data-src="img/headshot-s.png"></div>
+				        <div data-src="img/headshot-m.png" data-media="(min-width: 45em)"></div>
+				        <div data-src="img/headshot-l.png" data-media="(min-width: 60em)"></div>
+				        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+				        <noscript>
+				            <img src="img/headshot-s.png" alt="Kirk Min">
+				        </noscript>
+				    </div>
+				</figure>
+				
+				<h1>Hi, I'm Kirk</h1>
+
+				<h2>A fullstack Ruby on Rails programmer from Los Angeles with a passion for debugging</h2>
+			</header>
+		</div>
+		<div id="container-content">
+			<article id="content">
+			
+				<section id="portfolio" class="group">
+				
+					<header class="wrapper">
+						<h3>My Portfolio</h3>
+						<p>Some of my solo projects!</p>
+					</header>
+
+					<article class="group wrapper">
+                        <h4>ProKeys</h4>
+                            <a href="http://www.prokeys.live">
+                                <figure>
+                                    <img src="./img/proKeys.png" alt="ProKeys" />
+                                </figure> 
+                            </a>
+                    </article>
+
+                    <article class="group wrapper">
+                        <h4>TROLOLO</h4>
+                            <a href="http://trolo.herokuapp.com">
+                                <figure>
+                                    <img src="./img/TROLOLO.png" alt="TROLOLO" />
+                                </figure>
+                            </a>
+                    </article>
+
+                    <article class="group wrapper">
+                        <h4>Zombie Smash</h4>
+                            <a href="http://www.kirkmin.com/LFD2">
+                                <figure>
+                                    <img src="./img/ZombieSmash.png" alt="Zombie Smash" />
+                                </figure>
+                            </a>
+                    </article>
+                    
+                    <article class="group wrapper">
+                        <h4>Gamehub</h4>
+                            <a href="http://www.gamehub.club">
+                                <figure>
+                                    <img src="./img/gamehub.png" alt="Gamehub" />	
+                                </figure> 
+                            </a>
+                    </article>
+				
+				</section>
+				
+				<section id="resume" class="group">
+
+					<header class="wrapper">
+						<h3>My Resume</h3>
+                        <p>Click to download</p>
+					</header>
+
+					<a href="./img/resume.pdf" download>
+						<figure>
+							<img src="./img/resume.jpg" alt="Resume">
+						</figure>
+					</a>
+
+				</section>
+
+				<section id="skills" class="group">
+
+					<header class="wrapper">
+						<h3>My Skills</h3>
+					</header>
+
+					<article class="wrapper">
+						<h4>Ruby</h4>
+						<figure class="box">
+							<img src="./img/ruby.jpg" alt="Ruby">
+						</figure>
+					</article>
+
+					<article class="wrapper">
+						<h4>Ruby on Rails</h4>
+						<figure class="box">
+							<img src="./img/ruby_on_rails.jpg" alt="Ruby on Rails">
+						</figure>
+					</article>
+
+					<article class="wrapper">
+						<h4>Backbone</h4>
+						<figure class="box">
+							<img src="./img/backbone.png" alt="Backbone">
+						</figure>
+					</article>
+
+					<article class="wrapper">
+						<h4>Javascript</h4>
+						<figure class="box">
+							<img src="./img/js.jpg" alt="Javascript">
+						</figure>
+					</article>
+
+					<article class="wrapper">
+						<h4>CSS</h4>
+						<figure class="box">
+							<img src="./img/css.png" alt="CSS">
+						</figure>
+					</article>
+
+					<article class="wrapper">
+						<h4>HTML5</h4>
+						<figure class="box">
+							<img src="./img/html5.png" alt="HTML5">
+						</figure>
+					</article>
+
+					<article class="wrapper">
+						<h4>jQuery</h4>
+						<figure class="box">
+							<img src="./img/jquery.jpg" alt="jQuery">
+						</figure>
+					</article>
+
+					<article class="wrapper">
+						<h4>git</h4>
+						<figure class="box">
+							<img src="./img/git.jpg" alt="Git">
+						</figure>
+					</article>
+
+					<article class="wrapper">
+						<h4>Heroku</h4>
+						<figure class="box">
+							<img src="./img/heroku.png" alt="Heroku">
+						</figure>
+					</article>
+					
+				</section>
+		
+			</article>
+		</div>
+		<div id="container-footer">
+			<form id="contact">
+			    <fieldset class="wrapper">
+			        <legend>Contact</legend>
+						<ul id="info" class="group">
+							<li><i class="fa fa-home"></i>2331 Montrose Ave 2,</li>
+							<li><i class="fa fa-none"></i>Montrose CA, 91020</li>
+							<li><i class="fa fa-phone"></i>+1 818 815 8214</li>
+							<li><i class="fa fa-envelope"></i>kirksmin@gmail.com</li>
+							<li><a href="http://www.facebook.com/kirk.s.min"><i class="fa fa-facebook-square"></i>Facebook</li></a>
+							<li><a href="http://www.linkedin.com/in/kirkmin"><i class="fa fa-linkedin-square"></i>LinkedIn</li></a>
+							<li><a href="http://www.github.com/kirkmin"><i class="fa fa-github-square"></i>Github</li></a>
+							</li>
+			            </ul>
+			            <ul id="emailList" class="group">
+			                <li class="name">
+			                    <label for="name">Your Name</label>
+			                    <input type="text" id="name" name="name" />
+			                </li>
+			                <li class="email">
+			                    <label for="email">Your Email</label>
+			                    <input type="email" id="email" name="email" />
+			                </li>
+			                <li class="message">
+			                    <label for="message">Say Hello</label>
+			                    <textarea id="message" name="message"></textarea>
+			                </li>
+			            </ul>
+			        <input class="send" type="submit" name="submit" value="Send" />
+			    </fieldset>
+			</form>           
+		</div>	
+	</body>
+</html>
