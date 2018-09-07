@@ -208,7 +208,7 @@ h2  {
 		    }
 			
 h1, h2 {
-	text-shadow: 0 2px 2px rgba(0, 0, 0, .65);
+	text-shadow: 1px 2px 3px black;
 			 }
 			 
 h3 {
@@ -242,6 +242,10 @@ h6 {
 	color: #aaa;
 	font-weight: 200;
 		}
+
+section {
+	padding: 1.3em 0;
+}
 		
 .wrapper {
 	        padding: 0 .65em;
@@ -264,8 +268,10 @@ h6 {
 		    }
     
 #kirk img {
-		    width: 100%;
-		    }		
+	border-radius: 50%;
+    border: solid 1px #5a465a;
+    width: 100%;
+}		
 		
 #nav h3 {
 	text-transform: capitalize;
@@ -343,13 +349,18 @@ h6 {
 	padding:14px;
 }
 
-#skills article {
-	float: left;
-	width: 50%;
-}
-
 #skills img {
 	margin: auto;
+}
+
+#skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#skills article {
+
 }
 
 #portfolio figure, #resume figure, .box {
@@ -387,9 +398,16 @@ h6 {
 
 /* Image Offset for Indication of Linked Content */
 
+#portfolio figure,
+#resume figure {
+	bottom: 0;
+	transition: bottom .3s;
+}
+
 #portfolio figure:hover,
 #resume figure:hover {
-		 bottom: .26em;
+	bottom: .26em;
+	transition: bottom .3s;
 }
 		
 section footer {
@@ -419,7 +437,9 @@ img {
 
 #nav,
 #masthead,
-#content,
+#portfolio,
+#skills,
+#resume-wrapper,
 #contact {
     margin: 0 3.3%;
     }
@@ -544,8 +564,23 @@ img {
 			Media Queries for screen less than 45em (720px)
 ****************************************** */
 	@media screen and (max-width: 45em) {
+	#resume {
+		background: #352a38 url("../img/resume-bg-l.jpg") no-repeat top center;
+		background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+
 	#container-header {
 		background: #352a38 url("../img/bg-photo-s.jpg") no-repeat top center;
+		background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		background-size: cover;
@@ -592,13 +627,30 @@ img {
 		}
 		#nav,
 		#masthead,
-		#content,
+		#portfolio,
+		#skills,
+		#resume-wrapper,
 		#contact {
 		    margin: 0 5.5%;
 		    }
+
+		#resume {
+			background: #352a38 url("../img/resume-bg-l.jpg") no-repeat top center;
+			background-attachment: fixed;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			background-size: cover;
+		}
 			
 		#container-header {
 			background: #352a38 url("../img/bg-photo-l.jpg") no-repeat top center;
+			background-attachment: fixed;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
 			padding:5% 0;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
@@ -773,31 +825,6 @@ img {
 		.ie textarea {
 		    *behavior: url("http://www.absolute-path.com/js/boxsizing.htc");
 		}
-
-	
-@media screen and (min-width: 29.4375em) and (max-width:43.625em) {
-	
-	#skills article {
-		width: 33.333%;
-	}
-
-}
-
-@media screen and (min-width: 43.625em) and (max-width:61.75em) {
-	
-	#skills article {
-		width: 25%;
-	}
-
-}
-
-@media screen and (min-width: 61.75em) {
-	
-	#skills article {
-		width: 20%;
-	}
-
-}
 
 @font-face {
   font-family: 'FontAwesome';
