@@ -337,9 +337,8 @@ section {
 		}
 		
 #content article {
-    flex: 1 1 250px;
+    flex: 1 1 200px;
     max-width: 300px;
-    min-width: 200px;
     box-sizing: border-box;
     padding-top: .65em;
     padding-bottom: 1.3em;
@@ -376,6 +375,15 @@ section {
 
 #skills {
 	padding-top: .65em;
+}
+
+.fake-flex-item {
+  border: none !important;
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 #resume figure {
