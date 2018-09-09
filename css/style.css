@@ -336,14 +336,6 @@ section {
 		    overflow: hidden;  
 		}
 		
-#content article {
-    flex: 1 1 200px;
-    max-width: 300px;
-    box-sizing: border-box;
-    padding-top: .65em;
-    padding-bottom: 1.3em;
-}
-		
 #portfolio h4 {
 	line-height: 1.82;
 		}
@@ -356,10 +348,35 @@ section {
 	margin: auto;
 }
 
-#skills-wrapper {
+#skills-wrapper,
+#portfolio-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+		
+#skills article {
+    flex: 1 1 200px;
+    max-width: 300px;
+    box-sizing: border-box;
+    padding-top: .65em;
+    padding-bottom: 1.3em;
+}
+
+#portfolio article {
+	flex: 1 1 300px;
+    max-width: 450px;
+    box-sizing: border-box;
+    padding-bottom: .65em;
+}
+
+.fake-flex-item {
+  border: none !important;
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 #portfolio figure, #resume figure, .box {
@@ -373,17 +390,12 @@ section {
 	box-sizing:border-box;
 }
 
-#skills {
-	padding-top: .65em;
+#portfolio figure {
+    padding: .65em;
 }
 
-.fake-flex-item {
-  border: none !important;
-  height: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+#skills {
+	padding-top: .65em;
 }
 
 #resume figure {
@@ -425,7 +437,6 @@ section footer {
 #container-nav {
 	background:#fff;
 }
-
 
 
 #container-content {
@@ -544,7 +555,7 @@ img {
 
 	.send {
 	    display: inline-block;
-	    max-width: 20em;
+	    max-width: 15em;
 	    font-size: 1em;
 	    line-height: 1;
 	    font-weight: 500;
@@ -624,11 +635,6 @@ img {
 	    body {
 	        font-size: 107.692307692308%;
 	        }
-
-		#portfolio article {
-			float: left;
-			width: 33.333%;
-		}
 		
 		#masthead {
 			max-width:40em;
@@ -676,7 +682,7 @@ img {
 	    }
 		
 	    #nav h3 {
-	         margin: .39em 1.3em 0 0;
+	         margin: .48em 1.3em 0 0;
 	    }
 		
 	    #nav label {
@@ -771,7 +777,6 @@ img {
 	}
 	
 }
-
 
 /* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
 
