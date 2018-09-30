@@ -36,6 +36,51 @@
 			<!--[if IE 6]>
 				<script src="./js/selectivizr-min.js"></script>
 			<![endif]-->
+		<script>
+			function getScrollbarWidth() {
+			    var outer = document.createElement("div");
+			    outer.style.visibility = "hidden";
+			    outer.style.width = "100px";
+			    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+			    document.body.appendChild(outer);
+
+			    var widthNoScroll = outer.offsetWidth;
+			    // force scrollbars
+			    outer.style.overflow = "scroll";
+
+			    // add innerdiv
+			    var inner = document.createElement("div");
+			    inner.style.width = "100%";
+			    outer.appendChild(inner);        
+
+			    var widthWithScroll = inner.offsetWidth;
+
+			    // remove divs
+			    outer.parentNode.removeChild(outer);
+
+			    return widthNoScroll - widthWithScroll;
+			}
+
+			var openModal = function () {
+				document.body.className = "modal-open"
+		        document.body.style.paddingRight = getScrollbarWidth() + "px"
+			}
+
+			var closeModal = function (e, elementId) {
+		        document.getElementById(elementId).checked = false;
+		        document.body.className = ""
+		        document.body.style.paddingRight = "0px"
+		    }
+
+		    var closeModalAfterCheck = function (e, elementId) {
+			    if (e.target == e.currentTarget) {
+			        document.getElementById(elementId).checked = false;
+			        document.body.className = ""
+			        document.body.style.paddingRight = "0px"
+			    }
+		    }
+		</script>
 			
 	</head>
 
@@ -90,53 +135,255 @@
 
 					<div id="portfolio-wrapper">
 						<article class="wrapper">
-	                        <h4>CezanneUSA</h4>
-	                            <a href="https://www.cezanneusa.com">
+					        <label for="cezanne-toggle" class="toggle-label" onclick="openModal()">
+		                        <h4>CezanneUSA</h4>
+	                            <div class="floated-figure-wrapper">
 	                                <figure>
-	                                    <img src="./img/cezanneusa.png" alt="CezanneUSA" />
+	                                    <img src="./img/cezanneusa-s.png" alt="CezanneUSA" />
 	                                </figure> 
-	                            </a>
-	                    </article>
-
-						<article class="wrapper">
-	                        <h4>Burger Builder</h4>
-	                            <a href="https://burger-builder-7fde3.firebaseapp.com/">
-	                                <figure>
-	                                    <img src="./img/burger-builder.png" alt="Burger Builder" />
-	                                </figure> 
-	                            </a>
-	                    </article>
-
-						<article class="wrapper">
-	                        <h4>ProKeys</h4>
-	                            <a href="http://www.prokeys.live">
-	                                <figure>
-	                                    <img src="./img/ProKeys.png" alt="ProKeys" />
-	                                </figure> 
-	                            </a>
+	                            </div>
+					        </label>
+							<input type="checkbox" id="cezanne-toggle" class="checkbox-hack" />
+                            <div class="modal" onclick="closeModalAfterCheck(event, 'cezanne-toggle')">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal(event, 'cezanne-toggle')">&times;</span>
+										<div class="project-title">CezanneUSA</div>
+									</div>
+									<hr>
+									<div class="modal-body">
+										<div class="project-description">
+											<p class="project-main-description">
+												Women's fashion wholesale e-commerce web application for Style in USA, inc.
+											</p>
+											<ul class="project-description-list">
+												<li>Advanced Backbone-on-Rails design patterns, including overriding parse methods to create Rails-like associations client-side</li>
+												<li>Optimizing and rescaling product images, and uploading in S3 via paperclip API</li>
+												<li>Scalable search queries via ElasticSearch, and logistics/backup automization via CRON jobs</li>
+											</ul>
+										</div>
+										<hr>
+										<div class="project-link-wrapper">
+											<a href="https://www.cezanneusa.com" target="_blank">
+												<figure> 
+												    <div data-picture data-alt="CezanneUSA">
+												        <div data-src="img/cezanneusa-s.png"></div>
+												        <div data-src="img/cezanneusa-m.png" data-media="(min-width: 45em)"></div>
+												        <div data-src="img/cezanneusa-l.png" data-media="(min-width: 60em)"></div>
+												        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												        <noscript>
+												            <img src="img/cezanneusa-s.png" alt="CezanneUSA">
+												        </noscript>
+												    </div>
+												</figure>
+												<p>Visit Page</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 	                    </article>
 
 	                    <article class="wrapper">
-	                        <h4>TROLOLO</h4>
-	                            <a href="http://trolo.herokuapp.com">
+					        <label for="burger-builder-toggle" class="toggle-label" onclick="openModal()">
+		                        <h4>Burger Builder</h4>
+	                            <div class="floated-figure-wrapper">
 	                                <figure>
-	                                    <img src="./img/TROLOLO.png" alt="TROLOLO" />
-	                                </figure>
-	                            </a>
+	                                    <img src="./img/burger-builder-s.png" alt="Burger Builder" />
+	                                </figure> 
+	                            </div>
+					        </label>
+							<input type="checkbox" id="burger-builder-toggle" class="checkbox-hack" />
+                            <div class="modal" onclick="closeModalAfterCheck(event, 'burger-builder-toggle')">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal(event, 'burger-builder-toggle')">&times;</span>
+										<div class="project-title">Burger Builder</div>
+									</div>
+									<hr>
+									<div class="modal-body">
+										<div class="project-description">
+											<p class="project-main-description">
+												React course final project demo app built with latest technologies and best practices
+											</p>
+											<ul class="project-description-list">
+												<li>Advanced Redux design patterns with middleware for dynamic reducers and lean action creators</li>
+												<li>Incorporated ES6 features for improved performance and readability</li>
+												<li>Responsive Web Design with CSS-Modules and lazy loading assets</li>
+											</ul>
+										</div>
+										<hr>
+										<div class="project-link-wrapper">
+											<a href="https://burger-builder-7fde3.firebaseapp.com" target="_blank">
+												<figure> 
+												    <div data-picture data-alt="Burger Builder">
+												        <div data-src="img/burger-builder-s.png"></div>
+												        <div data-src="img/burger-builder-m.png" data-media="(min-width: 45em)"></div>
+												        <div data-src="img/burger-builder-l.png" data-media="(min-width: 60em)"></div>
+												        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												        <noscript>
+												            <img src="img/burger-builder-s.png" alt="Burger Builder">
+												        </noscript>
+												    </div>
+												</figure>
+												<p>Visit Page</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 	                    </article>
 
 	                    <article class="wrapper">
-	                        <h4>Zombie Smash</h4>
-	                            <a href="http://www.kirkmin.com/LFD2">
+					        <label for="prokeys-toggle" class="toggle-label" onclick="openModal()">
+		                        <h4>ProKeys</h4>
+	                            <div class="floated-figure-wrapper">
 	                                <figure>
-	                                    <img src="./img/ZombieSmash.png" alt="Zombie Smash" />
-	                                </figure>
-	                            </a>
+	                                    <img src="./img/prokeys-s.png" alt="ProKeys" />
+	                                </figure> 
+	                            </div>
+					        </label>
+							<input type="checkbox" id="prokeys-toggle" class="checkbox-hack" />
+                            <div class="modal" onclick="closeModalAfterCheck(event, 'prokeys-toggle')">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal(event, 'prokeys-toggle')">&times;</span>
+										<div class="project-title">ProKeys</div>
+									</div>
+									<hr>
+									<div class="modal-body">
+										<div class="project-description">
+											<p class="project-main-description">
+												Demo web application for playing, customizing and recording music on your keyboard
+											</p>
+											<ul class="project-description-list">
+												<li>Advanced use of dynamic elements for custom drag-and-drop UI, and preparing audios</li>
+												<li>Extensive use of Ajax in modal authentication for partial user access to content</li>
+											</ul>
+										</div>
+										<hr>
+										<div class="project-link-wrapper">
+											<a href="http://www.prokeys.live" target="_blank">
+												<figure> 
+												    <div data-picture data-alt="ProKeys">
+												        <div data-src="img/prokeys-s.png"></div>
+												        <div data-src="img/prokeys-m.png" data-media="(min-width: 45em)"></div>
+												        <div data-src="img/prokeys-l.png" data-media="(min-width: 60em)"></div>
+												        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												        <noscript>
+												            <img src="img/prokeys-s.png" alt="ProKeys">
+												        </noscript>
+												    </div>
+												</figure>
+												<p>Visit Page</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+	                    </article>
+
+	                    <article class="wrapper">
+					        <label for="trololo-toggle" class="toggle-label" onclick="openModal()">
+		                        <h4>TROLOLO</h4>
+	                            <div class="floated-figure-wrapper">
+	                                <figure>
+	                                    <img src="./img/trololo-s.png" alt="TROLOLO" />
+	                                </figure> 
+	                            </div>
+					        </label>
+							<input type="checkbox" id="trololo-toggle" class="checkbox-hack" />
+                            <div class="modal" onclick="closeModalAfterCheck(event, 'trololo-toggle')">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal(event, 'trololo-toggle')">&times;</span>
+										<div class="project-title">TROLOLO</div>
+									</div>
+									<hr>
+									<div class="modal-body">
+										<div class="project-description">
+											<p class="project-main-description">
+												Collaboration and organization demo app based on Trello
+											</p>
+											<ul class="project-description-list">
+												<li>Rich user experience featuring intuitive drag-and-drop UI to reorganize cards and items</li>
+											</ul>
+										</div>
+										<hr>
+										<div class="project-link-wrapper">
+											<a href="http://trolo.herokuapp.com" target="_blank">
+												<figure> 
+												    <div data-picture data-alt="TROLOLO">
+												        <div data-src="img/trololo-s.png"></div>
+												        <div data-src="img/trololo-m.png" data-media="(min-width: 45em)"></div>
+												        <div data-src="img/trololo-l.png" data-media="(min-width: 60em)"></div>
+												        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												        <noscript>
+												            <img src="img/trololo-s.png" alt="TROLOLO">
+												        </noscript>
+												    </div>
+												</figure>
+												<p>Visit Page</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+	                    </article>
+
+	                    <article class="wrapper">
+					        <label for="zombie-smash-toggle" class="toggle-label" onclick="openModal()">
+		                        <h4>Zombie Smash</h4>
+	                            <div class="floated-figure-wrapper">
+	                                <figure>
+	                                    <img src="./img/zombie-smash-s.png" alt="Zombie Smash" />
+	                                </figure> 
+	                            </div>
+					        </label>
+							<input type="checkbox" id="zombie-smash-toggle" class="checkbox-hack" />
+                            <div class="modal" onclick="closeModalAfterCheck(event, 'zombie-smash-toggle')">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal(event, 'zombie-smash-toggle')">&times;</span>
+										<div class="project-title">Zombie Smash</div>
+									</div>
+									<hr>
+									<div class="modal-body">
+										<div class="project-description">
+											<p class="project-main-description">
+												Original shooting survival game written in Javascript
+											</p>
+											<ul class="project-description-list">
+												<li>Sprite based visual interface consuming Canvas 2D API</li>
+												<li>Supports smooth animation and intuitive controls via Javascript engine</li>
+											</ul>
+										</div>
+										<hr>
+										<div class="project-link-wrapper">
+											<a href="http://www.kirkmin.com/LFD2" target="_blank">
+												<figure> 
+												    <div data-picture data-alt="Zombie Smash">
+												        <div data-src="img/zombie-smash-s.png"></div>
+												        <div data-src="img/zombie-smash-m.png" data-media="(min-width: 45em)"></div>
+												        <div data-src="img/zombie-smash-l.png" data-media="(min-width: 60em)"></div>
+												        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												        <noscript>
+												            <img src="img/zombie-smash-s.png" alt="Zombie Smash">
+												        </noscript>
+												    </div>
+												</figure>
+												<p>Visit Page</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 	                    </article>
 
 	                    <article class="wrapper fake-flex-item"></article>
 						<article class="wrapper fake-flex-item"></article>
 						<article class="wrapper fake-flex-item"></article>
+						
 					</div>
 
 				</section>
@@ -201,16 +448,16 @@
 						</article>
 
 						<article class="wrapper">
-							<h4>Amazon Web Services</h4>
+							<h4>Backbone</h4>
 							<figure class="box">
-								<img src="./img/aws.png" alt="AWS">
+								<img src="./img/backbone.png" alt="Backbone">
 							</figure>
 						</article>
 
 						<article class="wrapper">
-							<h4>Backbone</h4>
+							<h4>Amazon Web Services</h4>
 							<figure class="box">
-								<img src="./img/backbone.png" alt="Backbone">
+								<img src="./img/aws.png" alt="AWS">
 							</figure>
 						</article>
 
@@ -236,12 +483,21 @@
 						</article>
 
 						<article class="wrapper">
+							<h4>Shopify API</h4>
+							<figure class="box">
+								<img src="./img/shopify.jpg" alt="Shopify API">
+							</figure>
+						</article>
+
+						<article class="wrapper">
 							<h4>Heroku</h4>
 							<figure class="box">
 								<img src="./img/heroku.png" alt="Heroku">
 							</figure>
 						</article>
 
+						<article class="wrapper fake-flex-item"></article>
+						<article class="wrapper fake-flex-item"></article>
 						<article class="wrapper fake-flex-item"></article>
 						<article class="wrapper fake-flex-item"></article>
 						<article class="wrapper fake-flex-item"></article>
@@ -283,6 +539,6 @@
 			        <input class="send" type="submit" name="submit" value="Send" />
 			    </fieldset>
 			</form>           
-		</div>	
+		</div>
 	</body>
 </html>
