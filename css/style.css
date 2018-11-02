@@ -177,7 +177,7 @@ html {
 
 body {
 	font-family: "Roboto Condensed Light", "Helvetica Neue", Helvetica, sans-serif;
-	background: #eee url("../img/bg-pattern.png") repeat 0 0;
+
 /* Part of Advanced Checkbox Hack for navigation */
 	-webkit-animation: bugfix infinite 1s; 
 	position: static; overflow-y:auto
@@ -434,11 +434,6 @@ section footer {
 	background:#fff;
 }
 
-
-#container-content {
-	padding: 24px 0;
-}
-
 #container-footer {
 	padding: 32px 0;
 	background:#352a38;
@@ -456,9 +451,14 @@ img {
 #skills,
 #resume-wrapper,
 #contact {
-    margin: 0 3.3%;
-    }
+    padding-left: 3.3%;
+    padding-right: 3.3%;
+}
 	
+#portfolio, #skills {
+	background: #eee url("../img/bg-pattern.png") repeat 0 0;
+}
+
 
 
 /********************************************
@@ -578,33 +578,24 @@ img {
 			Media Queries for screen less than 45em (720px)
 ****************************************** */
 	@media screen and (max-width: 45em) {
-	#resume {
-		background: #352a38 url("../img/resume-bg-l.jpg") no-repeat top center;
-		background-attachment: fixed;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		background-size: cover;
+	#resume .parallax-background-div {
+		background-color: #352a38;
+	    background-image: url("../img/resume-bg-l.jpg");
 	}
 
 	#container-header {
-		background: #352a38 url("../img/bg-photo-s.jpg") no-repeat top center;
-		background-attachment: fixed;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		background-size: cover;
 		padding: 10% 0;
-			}
+	}
+
+	#container-header .parallax-background-div {
+		background-color: #352a38;
+	    background-image: url("../img/bg-photo-s.jpg");
+	}
 			
-			#portfolio .floated-figure-wrapper figure {
-				max-width: 25em;
-			}
-		}
+	#portfolio .floated-figure-wrapper figure {
+		max-width: 25em;
+	}
+}
 
 	@media screen and (min-width: 35em) {
 		#contact {
@@ -640,32 +631,23 @@ img {
 		#skills,
 		#resume-wrapper,
 		#contact {
-		    margin: 0 5.5%;
-		    }
+		    padding-left: 5.5%;
+		    padding-right: 5.5%;
+	    }
 
-		#resume {
-			background: #352a38 url("../img/resume-bg-l.jpg") no-repeat top center;
-			background-attachment: fixed;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-size: cover;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			background-size: cover;
+		#resume .parallax-background-div {
+			background-color: #352a38;
+			background-image: url("../img/resume-bg-l.jpg");
 		}
 			
 		#container-header {
-			background: #352a38 url("../img/bg-photo-l.jpg") no-repeat top center;
-			background-attachment: fixed;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-size: cover;
 			padding:5% 0;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			background-size: cover;
 		}
-			
+
+		#container-header .parallax-background-div {
+			background-color: #352a38;
+		    background-image: url("../img/bg-photo-l.jpg");
+		}
 			
 	    #nav label {
 	        display: none;
@@ -673,7 +655,8 @@ img {
 		
     
 	    #nav {
-	        padding: 0;
+	        padding-top: 0;
+	        padding-bottom: 0;
 	    }
 		
 	    #nav h3 {
@@ -1037,4 +1020,31 @@ img {
 
 body.modal-open {
     overflow: hidden; 
+}
+
+/*Parallax code*/
+
+.parallax-background-div {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#parallax-background-div-1 {
+    z-index: -998;
+}
+
+#parallax-background-div-2 {
+    z-index: -999;
+}
+
+.parallax-div {
+  position: relative;
 }
