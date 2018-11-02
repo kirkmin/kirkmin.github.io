@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var parallaxBG1 = document.getElementById("parallax-background-div-1")
 	var parallaxBG2 = document.getElementById("parallax-background-div-2")
 
-	window.addEventListener('scroll', function(e) {
+	document.addEventListener('scroll', function(e) {
 		if(document.documentElement.scrollTop < (header.offsetTop + header.scrollHeight + 100)){
 			parallaxBG1.style.zIndex = -998
 			parallaxBG2.style.zIndex = -999
