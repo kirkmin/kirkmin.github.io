@@ -446,10 +446,6 @@ section footer {
 	font-weight:100;
 }
 
-img {
-	max-width:100%;
-}
-
 #nav,
 #masthead,
 #portfolio,
@@ -577,172 +573,139 @@ img {
 /* ******************************************
 			Media Queries for screen less than 45em (720px)
 ****************************************** */
-	@media screen and (max-width: 45em) {
-	#resume {
-		background: #352a38 url("../img/resume-bg-l.jpg") no-repeat top center;
-		background-attachment: fixed;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		background-size: cover;
-	}
-
+@media screen and (max-width: 45em) {
 	#container-header {
-		background: #352a38 url("../img/bg-photo-s.jpg") no-repeat top center;
-		background-attachment: fixed;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		background-size: cover;
 		padding: 10% 0;
-			}
-			
-			#portfolio .floated-figure-wrapper figure {
-				max-width: 25em;
-			}
-		}
-
-	@media screen and (min-width: 35em) {
-		#contact {
-			position: relative;
-		}
-
-		#info {
-			position: absolute;
-			width: 200px;
-		}
-
-		#emailList, .send {
-			margin-left: 200px;
-		}
 	}
+		
+	#portfolio .floated-figure-wrapper figure {
+		max-width: 25em;
+	}
+
+	.jarallax .jarallax-img img{
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	}
+}
+
+@media screen and (min-width: 35em) {
+	#contact {
+		position: relative;
+	}
+
+	#info {
+		position: absolute;
+		width: 200px;
+	}
+
+	#emailList, .send {
+		margin-left: 200px;
+	}
+}
 
 /* ******************************************
 	Media Queries for screen wider than 45em (720px)
 ****************************************** */
 
-	@media screen and (min-width: 45em) {
+@media screen and (min-width: 45em) {
 
-	    body {
-	        font-size: 107.692307692308%;
-	        }
-		
-		#masthead {
-			max-width:40em;
-		}
-		#nav,
-		#masthead,
-		#portfolio,
-		#skills,
-		#resume-wrapper,
-		#contact {
-		    margin: 0 5.5%;
-		    }
-
-		#resume {
-			background: #352a38 url("../img/resume-bg-l.jpg") no-repeat top center;
-			background-attachment: fixed;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-size: cover;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			background-size: cover;
-		}
-			
-		#container-header {
-			background: #352a38 url("../img/bg-photo-l.jpg") no-repeat top center;
-			background-attachment: fixed;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-size: cover;
-			padding:5% 0;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			background-size: cover;
-		}
-			
-			
-	    #nav label {
-	        display: none;
-	    }
-		
-    
-	    #nav {
-	        padding: 0;
-	    }
-		
-	    #nav h3 {
-	         margin: .48em 1.3em 0 0;
-	    }
-		
-	    #nav label {
-	        display: none;
-	    }
-		
-	    #nav nav {
-	        height: auto;
-	    }
-		
-	    #nav ul {
-	        border: 0;
-	        margin: 0;
-	        }
-		#nav li {
-		        display: inline;
-		        border: 0;
-		    }
-		#nav a {
-		        display: inline-block;
-		        }
-			
-		.name, .email {
-				position: relative;
-			    float: left;
-			    width: 50%;
-			    -webkit-box-sizing: border-box;
-			    -moz-box-sizing: border-box;
-			    box-sizing: border-box;
-			    }
-    
-		.name {
-			    padding-right: .65em;
-			    }
-    
-		.email {
-			    padding-left: .65em;
-			    }
+    body {
+        font-size: 107.692307692308%;
+        }
+	
+	#masthead {
+		max-width:40em;
 	}
+	#nav,
+	#masthead,
+	#portfolio,
+	#skills,
+	#resume-wrapper,
+	#contact {
+	    margin: 0 5.5%;
+	    }
+		
+	#container-header {
+		padding:5% 0;
+	}
+		
+    #nav label {
+        display: none;
+    }
+	
+
+    #nav {
+        padding: 0;
+    }
+	
+    #nav h3 {
+         margin: .48em 1.3em 0 0;
+    }
+	
+    #nav label {
+        display: none;
+    }
+	
+    #nav nav {
+        height: auto;
+    }
+	
+    #nav ul {
+        border: 0;
+        margin: 0;
+        }
+	#nav li {
+	        display: inline;
+	        border: 0;
+	    }
+	#nav a {
+	        display: inline-block;
+	        }
+		
+	.name, .email {
+			position: relative;
+		    float: left;
+		    width: 50%;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    }
+
+	.name {
+		    padding-right: .65em;
+		    }
+
+	.email {
+		    padding-left: .65em;
+		    }
+}
 	
 	/* ******************************************
 		Media Queries for screen wider than 60em (960px)
 	****************************************** */
 	
-	@media screen and (min-width: 60em) {
+@media screen and (min-width: 60em) {
 
-	.name, .email {
-	    padding-right: 1.3em;
-	    padding-left: 0;
-	    clear: both;
+.name, .email {
+    padding-right: 1.3em;
+    padding-left: 0;
+    clear: both;
+    }
+
+.message textarea {
+    width: 50%;
+    }
+
+	/* Form Fixes, IE7 and below */
+
+	.ie .message textarea {
+	    *width: 49.9%;
 	    }
-    
-	.message textarea {
-	    width: 50%;
-	    }
-	
-		/* Form Fixes, IE7 and below */
 
-		.ie .message textarea {
-		    *width: 49.9%;
-		    }
-
-		}
-    
 	}
+
+}
 
 
 /* ******************************************

@@ -20,7 +20,7 @@
 		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
 		<script src="./js/picturefill.js"></script>
 		<script src="./js/matchmedia.js"></script>
-		
+		<script src="./js/jarallax.js"></script>
 		<!--[if lt IE 9]>
 			<script src="./js/html5.js"></script>
 		<![endif]-->
@@ -36,51 +36,7 @@
 			<!--[if IE 6]>
 				<script src="./js/selectivizr-min.js"></script>
 			<![endif]-->
-		<script>
-			function getScrollbarWidth() {
-			    var outer = document.createElement("div");
-			    outer.style.visibility = "hidden";
-			    outer.style.width = "100px";
-			    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
-
-			    document.body.appendChild(outer);
-
-			    var widthNoScroll = outer.offsetWidth;
-			    // force scrollbars
-			    outer.style.overflow = "scroll";
-
-			    // add innerdiv
-			    var inner = document.createElement("div");
-			    inner.style.width = "100%";
-			    outer.appendChild(inner);        
-
-			    var widthWithScroll = inner.offsetWidth;
-
-			    // remove divs
-			    outer.parentNode.removeChild(outer);
-
-			    return widthNoScroll - widthWithScroll;
-			}
-
-			var openModal = function () {
-				document.body.className = "modal-open"
-		        document.body.style.paddingRight = getScrollbarWidth() + "px"
-			}
-
-			var closeModal = function (e, elementId) {
-		        document.getElementById(elementId).checked = false;
-		        document.body.className = ""
-		        document.body.style.paddingRight = "0px"
-		    }
-
-		    var closeModalAfterCheck = function (e, elementId) {
-			    if (e.target == e.currentTarget) {
-			        document.getElementById(elementId).checked = false;
-			        document.body.className = ""
-			        document.body.style.paddingRight = "0px"
-			    }
-		    }
-		</script>
+		<script src="./js/custom.js"></script>
 			
 	</head>
 
@@ -99,12 +55,15 @@
 		                <li><a href="#skills">Skills</a></li>
 		                <li><a href="#contact">Contact</a></li>
 		            </ul>
-		        </nav>
-				
-			
+		        </nav>			
 			</section>
 		</div>
-		<div id="container-header">
+
+		<div id="container-header" class="jarallax" data-jarallax data-speed="0.2">
+			<picture class="jarallax-img">
+		        <source media="(min-width: 45em)" srcset="./img/bg-photo-l.jpg">
+		        <img src="./img/bg-photo-s.jpg" alt="">
+		    </picture>
 			<header id="masthead" class="wrapper">
 				<figure id="kirk"> 
 				    <div data-picture data-alt="Kirk Min">
@@ -391,8 +350,9 @@
 					</div>
 
 				</section>
-				
-				<section id="resume" class="group">
+
+				<section id="resume" class="group jarallax" data-jarallax data-speed="0.2">
+					<img class="jarallax-img" src="./img/resume-bg-l.jpg" alt="">
 
 					<div id="resume-wrapper">
 						<header class="wrapper">
