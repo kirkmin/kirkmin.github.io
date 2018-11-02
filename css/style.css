@@ -1001,3 +1001,7 @@ section footer {
 body.modal-open {
     overflow: hidden; 
 }
+
+.jarallax img {
+	min-height: 100%;
+}
