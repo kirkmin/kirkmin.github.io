@@ -545,6 +545,10 @@ textarea {
     vertical-align: top; /* 2 */
 }
 
+#resume-wrapper header {
+	color: white;
+}
+
 .send {
     display: inline-block;
     max-width: 15em;
