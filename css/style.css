@@ -190,78 +190,79 @@ p {
 }
 
 h1,h2,h3,h4,h5,h6 {
-	    font-weight: 100;
-	    }
+    font-weight: 100;
+}
 		
 h1 {
 	font-size: 3.189em;
 	line-height: 1.223;
-		}
+}
 	
 h2  {
 	font-size: 2.126em;
 	line-height: 1.223;
-		    }
+}
 			
 h1, h2 {
 	text-shadow: 1px 2px 3px black;
-			 }
+}
 			 
 h3 {
 	font-size: 1.382em; 
 	line-height: 1.223;
-		}
+}
 		    
 h4 {
 	font-size: 1em;
 	line-height: 1.56;
 	text-transform: uppercase;
-		}
+}
 		
 h3,h4 {      
 	font-weight: 300;
 	text-transform: uppercase;
-		}
+}
 		
 h5 {
 	font-size: .8125em;
 	line-height: 1.125;
-		}
+}
 
 h5,h6 {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: .85em;
 	line-height: 1.53;
 	font-weight: 500;
-		}
+}
+
 h6 {
 	color: #aaa;
 	font-weight: 200;
-		}
+}
 
 section {
 	padding: 1.3em 0;
 }
 		
 .wrapper {
-	        padding: 0 .65em;
-	        -webkit-box-sizing: border-box;
-	        -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-		}
+    padding: 0 .65em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 		
 #masthead {
-			color:#fff;
-		        width:80%;
-		}
+	color:#fff;
+    width:80%;
+}
 		
 /* Headshot */
 
 #kirk {
-		    width: 25%;
-		    height: 0;
-		    padding-bottom: 25%;
-		    }
+    width: 25%;
+    height: 0;
+    padding-bottom: 25%;
+}
     
 #kirk img {
 	border-radius: 50%;
@@ -271,70 +272,70 @@ section {
 		
 #nav h3 {
 	text-transform: capitalize;
-		}
+}
 		
 #nav {
-		    padding: .65em 0;
-		}
+    padding: .65em 0;
+}
 	
 #nav h3 {
-		    float: left;
-		    text-transform: capitalize; 
-		}
+    float: left;
+    text-transform: capitalize; 
+}
 	
 #nav ul {
-		    list-style: none;
-		    padding: 0;
-		    border-bottom: 1px solid #eee;
-		    margin: .65em 0 .39em;
-		}
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    margin: .65em 0 .39em;
+}
 
 #nav li {
-		   border-top: 1px solid #eee;
-		}
+   border-top: 1px solid #eee;
+}
 	
 #nav a {
-		   display: block;
-		   font-size: 1.063em;
-		   color: #333;
-		   text-decoration: none;
-		   padding: .975em 1.3em; 
-		}
+   display: block;
+   font-size: 1.063em;
+   color: #333;
+   text-decoration: none;
+   padding: .975em 1.3em; 
+}
 	
 #nav a:hover {
-		   background: #f8f8f8;
-		}
+   background: #f8f8f8;
+}
 	
 #nav nav {
-		    height: 0;
-		    overflow: hidden;
-		}
+    height: 0;
+    overflow: hidden;
+}
 		
 #nav input[type=checkbox] {
-		    position: absolute;
-		    top: -999em;
-		    left: -999em;
-		}
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
 	
 #nav label { 
-		    display: block;
-		    background: url("../img/icon-menu.png") no-repeat right center;
-		    text-indent: -999em;
-		    cursor: pointer;
-		    -webkit-user-select: none;  /* Chrome all / Safari all */
-		    -moz-user-select: none;     /* Firefox all */
-		    -ms-user-select: none;      /* IE 10+ */
-		    user-select: none;
-		}
+    display: block;
+    background: url("../img/icon-menu.png") no-repeat right center;
+    text-indent: -999em;
+    cursor: pointer;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
 	
 #nav input[type=checkbox]:checked ~ nav {
-		    height: auto;
-		    overflow: hidden;  
-		}
+    height: auto;
+    overflow: hidden;  
+}
 		
 #portfolio h4 {
 	line-height: 1.82;
-		}
+}
 
 .box {
 	padding:14px;
@@ -428,7 +429,7 @@ section {
 		
 section footer {
 	clear: both;
-		   }
+}
 
 #container-nav {
 	background:#fff;
@@ -453,7 +454,7 @@ section footer {
 #resume-wrapper,
 #contact {
     margin: 0 3.3%;
-    }
+}
 	
 
 
@@ -461,282 +462,115 @@ section footer {
 	Fluid Media
 ********************************************/
 
-	figure {
-	    position: relative;
-	}
+figure {
+    position: relative;
+}
 
-	figure img,
-	figure object,
-	figure embed,
-	figure video {
-	    display: block;
-	    max-width: 100%; 
-	}
+figure img,
+figure object,
+figure embed,
+figure video {
+    display: block;
+    max-width: 100%; 
+}
 
-	img {
-	    border: 0;
-	    -ms-interpolation-mode: bicubic;
-	}
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
 
-	/* 
-	interpolation-mode
-	http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
-	 */
-	
+/* 
+interpolation-mode
+http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
+ */
+
 
 
 /* ******************************************
 	   Form Styles Basic Layout
 ****************************************** */
 
-	form {
-	    padding: 0 0 1.3em;
-	    }
-    
-	form ul {
-	    list-style: none;
-	    padding: .65em 0 0;
-	    }
-    
-	form li {
-	    padding: 0 0 .65em;
-	    }
-	
-	legend {
-		font-size: 1.382em; 
-		line-height: 1.223;
-		}
-		    
-	label {
-	    display: block;
-		font-size: 1em;
-		line-height: 1.56;
-	    padding: 0 0 .325em;
-		}
-		
-	legend, label {      
-		font-weight: 300;
-		text-transform: uppercase;
-		}
-	
-	input,
-	textarea {
-	    display: block;
-	    width: 100%;
-	    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		font-size: 1em;
-		line-height: 1.3;
-		font-weight: 500;
-	    padding: .65em;
-	    -webkit-box-sizing: border-box;
-	    -moz-box-sizing: border-box;
-	    box-sizing: border-box;
-	    }
-
-	/**
-	 * 1. Remove default vertical scrollbar in IE 6/7/8/9.
-	 * 2. Improve readability and alignment in all browsers.
-	 */
-
-	textarea {
-	    padding-bottom: 10%;
-	    overflow: auto; /* 1 */
-	    vertical-align: top; /* 2 */
-	    }
-
-	.send {
-	    display: inline-block;
-	    max-width: 15em;
-	    font-size: 1em;
-	    line-height: 1;
-	    font-weight: 500;
-	    color: #fff;
-	    text-decoration: none;
-	    background: #0074b0;
-	    margin: .65em .26em;
-	    padding: .975em;
-	    border: 0;
-	    border-radius: 1.3em;
-	    text-shadow: 0 -1px 1px rgba(0, 0, 0, .65);
-	    }
-    
-	.send:hover {
-	    background: #6f6f6f;
-	    }
-    
-	.send:active,
-	.send:focus {
-	    background: #555;
-	    }
-
-
-/* ******************************************
-			Media Queries for screen less than 45em (720px)
-****************************************** */
-@media screen and (max-width: 45em) {
-	#container-header {
-		padding: 10% 0;
-	}
-		
-	#portfolio .floated-figure-wrapper figure {
-		max-width: 25em;
-	}
-
-	.jarallax .jarallax-img img{
-	    width: 100%;
-	    height: 100%;
-	    object-fit: cover;
-	}
+form {
+    padding: 0 0 1.3em;
 }
 
-@media screen and (min-width: 35em) {
-	#contact {
-		position: relative;
-	}
-
-	#info {
-		position: absolute;
-		width: 200px;
-	}
-
-	#emailList, .send {
-		margin-left: 200px;
-	}
+form ul {
+    list-style: none;
+    padding: .65em 0 0;
 }
 
-/* ******************************************
-	Media Queries for screen wider than 45em (720px)
-****************************************** */
-
-@media screen and (min-width: 45em) {
-
-    body {
-        font-size: 107.692307692308%;
-        }
-	
-	#masthead {
-		max-width:40em;
-	}
-	#nav,
-	#masthead,
-	#portfolio,
-	#skills,
-	#resume-wrapper,
-	#contact {
-	    margin: 0 5.5%;
-	    }
-		
-	#container-header {
-		padding:5% 0;
-	}
-		
-    #nav label {
-        display: none;
-    }
-	
-
-    #nav {
-        padding: 0;
-    }
-	
-    #nav h3 {
-         margin: .48em 1.3em 0 0;
-    }
-	
-    #nav label {
-        display: none;
-    }
-	
-    #nav nav {
-        height: auto;
-    }
-	
-    #nav ul {
-        border: 0;
-        margin: 0;
-        }
-	#nav li {
-	        display: inline;
-	        border: 0;
-	    }
-	#nav a {
-	        display: inline-block;
-	        }
-		
-	.name, .email {
-			position: relative;
-		    float: left;
-		    width: 50%;
-		    -webkit-box-sizing: border-box;
-		    -moz-box-sizing: border-box;
-		    box-sizing: border-box;
-		    }
-
-	.name {
-		    padding-right: .65em;
-		    }
-
-	.email {
-		    padding-left: .65em;
-		    }
-}
-	
-	/* ******************************************
-		Media Queries for screen wider than 60em (960px)
-	****************************************** */
-	
-@media screen and (min-width: 60em) {
-
-.name, .email {
-    padding-right: 1.3em;
-    padding-left: 0;
-    clear: both;
-    }
-
-.message textarea {
-    width: 50%;
-    }
-
-	/* Form Fixes, IE7 and below */
-
-	.ie .message textarea {
-	    *width: 49.9%;
-	    }
-
-	}
-
+form li {
+    padding: 0 0 .65em;
 }
 
-
-/* ******************************************
-	Print Styles
-****************************************** */
-@media print and (max-width: 8.5in){
+legend {
+	font-size: 1.382em; 
+	line-height: 1.223;
+}
+	    
+label {
+    display: block;
+	font-size: 1em;
+	line-height: 1.56;
+    padding: 0 0 .325em;
+}
 	
-	#masthead {
-		color:black;
-	}
-	
-	#container-header {
-		height: auto;
-	}
-	
-	img {
-		width:2in;
-	}
-	
-	#portfolio	{
-		float:left;
-		width:45%;
-	}
-	
-	#container-footer	{
-		clear:both;
-	}
-	
+legend, label {      
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
-/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
+input,
+textarea {
+    display: block;
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.3;
+	font-weight: 500;
+    padding: .65em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    padding-bottom: 10%;
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+.send {
+    display: inline-block;
+    max-width: 15em;
+    font-size: 1em;
+    line-height: 1;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    background: #0074b0;
+    margin: .65em .26em;
+    padding: .975em;
+    border: 0;
+    border-radius: 1.3em;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .65);
+}
+
+.send:hover {
+    background: #6f6f6f;
+}
+
+.send:active,
+.send:focus {
+    background: #555;
+}
+
+    /* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
 
 .group:after {
     content: " "; 
@@ -746,8 +580,8 @@ section footer {
 	/* Clearfix */
 
 .group {
-	    *zoom: 1;
-	    }
+    *zoom: 1;
+}
 		
 
 /* Figures/Images */
@@ -756,46 +590,46 @@ section footer {
 .ie #resume figure {
     width: 100%;
     box-sizing: border-box;
-    }
+}
 
 /* "*" hack applies only to IE7 and below */
 
 .ie #portfolio figure,
 .ie #resume figure {
     *width: auto;
-    }
-   
-		/* Navigation */
+}
+
+	/* Navigation */
 
 /* IE8 .checked class for checkbox.js */
 
-		#nav input[type=checkbox].checked ~ nav {
-		    height: auto;
-		    overflow: visible;  
-		}
+#nav input[type=checkbox].checked ~ nav {
+    height: auto;
+    overflow: visible;  
+}
 
 /* Always show nav, IE7 and below */
 
-		.ie #nav nav {
-		    *height: auto;
-		    *overflow: visible;  
-		}
+.ie #nav nav {
+    *height: auto;
+    *overflow: visible;  
+}
 
 /* Hide navicon, IE7 and below */
 
-		.ie #nav label { 
-		    *background: none;
-		    }
-     
+.ie #nav label { 
+    *background: none;
+    }
+
 /* box-sizing polyfill, IE7 and below (The URL in .ie textarea is placeholder only. You will need to replace with path to your domain) */
 
-		.ie .wrapper,
-		.ie .name,
-		.ie .email,
-		.ie input,
-		.ie textarea {
-		    *behavior: url("http://www.absolute-path.com/js/boxsizing.htc");
-		}
+.ie .wrapper,
+.ie .name,
+.ie .email,
+.ie input,
+.ie textarea {
+    *behavior: url("http://www.absolute-path.com/js/boxsizing.htc");
+}
 
 @font-face {
   font-family: 'FontAwesome';
@@ -1002,6 +836,214 @@ body.modal-open {
     overflow: hidden; 
 }
 
-.jarallax img {
-	min-height: 100%;
+/*Parallax*/
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -100;
+}
+
+.parallax__container .parallax {
+	/* can be put in a seperate class for better control */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* --------------------------- */
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 100%;
+}
+
+.header-parallax {
+	background-image: url("../img/bg-photo-s.jpg");
+}
+
+.resume-parallax {
+	background-image: url("../img/resume-bg-s.jpg");
+}
+
+
+/* ******************************************
+			Media Queries for screen less than 45em (720px)
+****************************************** */
+@media screen and (max-width: 45em) {
+	#container-header {
+		padding: 10% 0;
+	}
+		
+	#portfolio .floated-figure-wrapper figure {
+		max-width: 25em;
+	}
+
+	.jarallax .jarallax-img img{
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	}
+}
+
+@media screen and (min-width: 35em) {
+	#contact {
+		position: relative;
+	}
+
+	#info {
+		position: absolute;
+		width: 200px;
+	}
+
+	#emailList, .send {
+		margin-left: 200px;
+	}
+}
+
+/* ******************************************
+	Media Queries for screen wider than 45em (720px)
+****************************************** */
+
+@media screen and (min-width: 45em) {
+
+	.header-parallax {
+		background-image: url("../img/bg-photo-l.jpg");
+	}
+
+	.resume-parallax {
+		background-image: url("../img/resume-bg-l.jpg");
+	}
+
+
+    body {
+        font-size: 107.692307692308%;
+    }
+	
+	#masthead {
+		max-width:40em;
+	}
+
+	#nav,
+	#masthead,
+	#portfolio,
+	#skills,
+	#resume-wrapper,
+	#contact {
+	    margin: 0 5.5%;
+    }
+		
+	#container-header {
+		padding:5% 0;
+	}
+		
+    #nav label {
+        display: none;
+    }
+	
+
+    #nav {
+        padding: 0;
+    }
+	
+    #nav h3 {
+         margin: .48em 1.3em 0 0;
+    }
+	
+    #nav label {
+        display: none;
+    }
+	
+    #nav nav {
+        height: auto;
+    }
+	
+    #nav ul {
+        border: 0;
+        margin: 0;
+        }
+	#nav li {
+	        display: inline;
+	        border: 0;
+	    }
+	#nav a {
+	        display: inline-block;
+	        }
+		
+	.name, .email {
+			position: relative;
+		    float: left;
+		    width: 50%;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    }
+
+	.name {
+		    padding-right: .65em;
+		    }
+
+	.email {
+		    padding-left: .65em;
+		    }
+}
+	
+	/* ******************************************
+		Media Queries for screen wider than 60em (960px)
+	****************************************** */
+	
+@media screen and (min-width: 60em) {
+
+.name, .email {
+    padding-right: 1.3em;
+    padding-left: 0;
+    clear: both;
+    }
+
+.message textarea {
+    width: 50%;
+    }
+
+	/* Form Fixes, IE7 and below */
+
+	.ie .message textarea {
+	    *width: 49.9%;
+	    }
+
+	}
+
+}
+
+
+/* ******************************************
+	Print Styles
+****************************************** */
+@media print and (max-width: 8.5in){
+	
+	#masthead {
+		color:black;
+	}
+	
+	#container-header {
+		height: auto;
+	}
+	
+	img {
+		width:2in;
+	}
+	
+	#portfolio	{
+		float:left;
+		width:45%;
+	}
+	
+	#container-footer	{
+		clear:both;
+	}
+	
 }

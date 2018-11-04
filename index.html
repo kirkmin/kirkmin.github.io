@@ -20,7 +20,7 @@
 		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
 		<script src="./js/picturefill.js"></script>
 		<script src="./js/matchmedia.js"></script>
-		<script src="./js/jarallax.js"></script>
+		<script src="./js/parallax.js"></script>
 		<!--[if lt IE 9]>
 			<script src="./js/html5.js"></script>
 		<![endif]-->
@@ -59,11 +59,7 @@
 			</section>
 		</div>
 
-		<div id="container-header" class="jarallax" data-jarallax data-speed="0">
-			<picture class="jarallax-img">
-		        <source media="(min-width: 45em)" srcset="./img/bg-photo-l.jpg">
-		        <img src="./img/bg-photo-s.jpg" alt="">
-		    </picture>
+		<div id="container-header">
 			<header id="masthead" class="wrapper">
 				<figure id="kirk"> 
 				    <div data-picture data-alt="Kirk Min">
@@ -81,7 +77,9 @@
 
 				<h2>A fullstack Ruby on Rails developer based in Los Angeles with a passion for algorithms and new technologies</h2>
 			</header>
+			<div class="parallax header-parallax"></div>
 		</div>
+
 		<div id="container-content">
 			<article id="content">
 			
@@ -351,9 +349,7 @@
 
 				</section>
 
-				<section id="resume" class="group jarallax" data-jarallax data-speed="0">
-					<img class="jarallax-img" src="./img/resume-bg-l.jpg" alt="">
-
+				<section id="resume" class="group">
 					<div id="resume-wrapper">
 						<header class="wrapper">
 							<h3>My Resume</h3>
@@ -365,8 +361,8 @@
 								<img src="./img/resume.jpg" alt="Resume">
 							</figure>
 						</a>
-					<div>
-
+					</div>
+					<div class="parallax resume-parallax"></div>
 				</section>
 
 				<section id="skills" class="group">
@@ -504,5 +500,11 @@
 			    </fieldset>
 			</form>           
 		</div>
+
+		<script>
+			new universalParallax().init({
+				speed: 10
+			});
+		</script>
 	</body>
 </html>
