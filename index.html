@@ -143,6 +143,56 @@
 	                    </article>
 
 	                    <article class="wrapper">
+					        <label for="zombie-smash-toggle" class="toggle-label" onclick="openModal()">
+		                        <h4>Zombie Smash</h4>
+	                            <div class="floated-figure-wrapper">
+	                                <figure>
+	                                    <img src="./img/zombie-smash-s.png" alt="Zombie Smash" />
+	                                </figure> 
+	                            </div>
+					        </label>
+							<input type="checkbox" id="zombie-smash-toggle" class="checkbox-hack" />
+                            <div class="modal" onclick="closeModalAfterCheck(event, 'zombie-smash-toggle')">
+								<div class="modal-content">
+									<div class="modal-header">
+										<span class="close" onclick="closeModal(event, 'zombie-smash-toggle')">&times;</span>
+										<div class="project-title">Zombie Smash</div>
+									</div>
+									<hr>
+									<div class="modal-body">
+										<div class="project-description">
+											<p class="project-main-description">
+												Original shooting survival game written in Javascript
+											</p>
+											<ul class="project-description-list">
+												<li>Solo project developed with pure Javascript</li>
+												<li>Sprite based visual interface consuming Canvas 2D API</li>
+												<li>Supports smooth animation and intuitive controls via Javascript engine</li>
+											</ul>
+										</div>
+										<hr>
+										<div class="project-link-wrapper">
+											<a href="http://www.kirkmin.com/LFD2" target="_blank">
+												<figure> 
+												    <div data-picture data-alt="Zombie Smash">
+												        <div data-src="img/zombie-smash-s.png"></div>
+												        <div data-src="img/zombie-smash-m.png" data-media="(min-width: 45em)"></div>
+												        <div data-src="img/zombie-smash-l.png" data-media="(min-width: 60em)"></div>
+												        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												        <noscript>
+												            <img src="img/zombie-smash-s.png" alt="Zombie Smash">
+												        </noscript>
+												    </div>
+												</figure>
+												<p>Visit Page</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+	                    </article>
+
+	                    <article class="wrapper">
 					        <label for="burger-builder-toggle" class="toggle-label" onclick="openModal()">
 		                        <h4>Burger Builder</h4>
 	                            <div class="floated-figure-wrapper">
@@ -280,56 +330,6 @@
 												        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
 												        <noscript>
 												            <img src="img/trololo-s.png" alt="TROLOLO">
-												        </noscript>
-												    </div>
-												</figure>
-												<p>Visit Page</p>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-	                    </article>
-
-	                    <article class="wrapper">
-					        <label for="zombie-smash-toggle" class="toggle-label" onclick="openModal()">
-		                        <h4>Zombie Smash</h4>
-	                            <div class="floated-figure-wrapper">
-	                                <figure>
-	                                    <img src="./img/zombie-smash-s.png" alt="Zombie Smash" />
-	                                </figure> 
-	                            </div>
-					        </label>
-							<input type="checkbox" id="zombie-smash-toggle" class="checkbox-hack" />
-                            <div class="modal" onclick="closeModalAfterCheck(event, 'zombie-smash-toggle')">
-								<div class="modal-content">
-									<div class="modal-header">
-										<span class="close" onclick="closeModal(event, 'zombie-smash-toggle')">&times;</span>
-										<div class="project-title">Zombie Smash</div>
-									</div>
-									<hr>
-									<div class="modal-body">
-										<div class="project-description">
-											<p class="project-main-description">
-												Original shooting survival game written in Javascript
-											</p>
-											<ul class="project-description-list">
-												<li>Solo project developed with pure Javascript</li>
-												<li>Sprite based visual interface consuming Canvas 2D API</li>
-												<li>Supports smooth animation and intuitive controls via Javascript engine</li>
-											</ul>
-										</div>
-										<hr>
-										<div class="project-link-wrapper">
-											<a href="http://www.kirkmin.com/LFD2" target="_blank">
-												<figure> 
-												    <div data-picture data-alt="Zombie Smash">
-												        <div data-src="img/zombie-smash-s.png"></div>
-												        <div data-src="img/zombie-smash-m.png" data-media="(min-width: 45em)"></div>
-												        <div data-src="img/zombie-smash-l.png" data-media="(min-width: 60em)"></div>
-												        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												        <noscript>
-												            <img src="img/zombie-smash-s.png" alt="Zombie Smash">
 												        </noscript>
 												    </div>
 												</figure>
